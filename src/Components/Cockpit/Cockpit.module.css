@@ -1,0 +1,40 @@
+.Cockpit{
+height:50px;
+background-color: #29235b;
+color:white;
+font-size: 13px;
+
+    justify-content: center;
+}
+.Cockpit label {
+    font-weight: bold;
+}
+.Header_Center{
+    float: left;
+    text-align: center;
+    width: 85%;
+    margin-left: 8%;
+}
+.Header_Right{
+    float: left;
+    text-align: end;
+    width: 5%;
+    
+}
+.Header_Right img{
+height: 35px;
+padding-top: 5px;
+}
+
+.Cockpit  a {
+ display: inline-block;
+ text-decoration: none;
+ color: #cccc;
+ font-weight: bold;
+ text-transform: uppercase;
+ margin: 10px;
+ padding: 5px;
+ }
+ .Cockpit  a:hover {
+ color: white ;    
+}

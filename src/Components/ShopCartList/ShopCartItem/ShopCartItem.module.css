@@ -1,0 +1,39 @@
+.ShopCartItem{
+    margin: 15px 0;
+    padding-left: 25px;
+    background-color: #eee;
+    width: 100%;
+    display: inline-block;
+}
+.ShopCartItem img{
+    height: 250px;
+}
+.ShopCartItem p{
+    width: 650px;
+   
+}
+.ShopCartItem .Item_Left{
+    float:left;
+}
+.ShopCartItem .Item_Right{
+    float: left;
+    padding-left: 35px;
+}
+.price{
+    display: inline-block;
+}
+.btn{
+    color: white ;
+    background-color: #29235b;
+
+    padding: 8px 9px;
+    font-weight: bold;
+    
+    width: 150px;
+     margin: 0 25px;
+}
+
+.btn:hover{
+    background-color: orange;
+    transition: 0.3s;
+}
