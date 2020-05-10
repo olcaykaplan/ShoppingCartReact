@@ -23,7 +23,12 @@ font-size: 13px;
 }
 .Header_Right img{
 height: 35px;
-padding-top: 5px;
+
+}
+.Header_Right a{
+
+    margin: 0 !important;
+    
 }
 
 .Cockpit  a {

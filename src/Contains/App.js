@@ -23,10 +23,10 @@ addShoppingCart =  (itemID) => {
   let product = products.find(p => p.id == itemID);
   let shopProduct = shopList.find(p => p.id == product.id);
   if(shopProduct){
-    shopProduct.count = parseInt(shopProduct.count)+1; 
+    shopProduct.quantity = parseInt(shopProduct.quantity)+1; 
   }
   else{
-     product.count=1;
+     product.quantity=1;
      shopList.push(product);
   }
   this.setState({ shoppingCart : shopList});
@@ -40,6 +40,7 @@ this.setState({
   shoppingCart : shopList
 })
 }
+
 togglePage = (page) => {
 let status = true;
 if(page === 'shoppingCart') status = false;
@@ -48,8 +49,13 @@ else status = true;
    homePage:status
  });
 }
+
 render(){
   let pageContent = '';
+  let orderedTotalProductNumber = 0;
+  this.state.shoppingCart.map(p => {
+    orderedTotalProductNumber += p.quantity;
+  }) 
   if(this.state.homePage){
    pageContent =  <ItemList 
                 items = {this.state.items}
@@ -66,7 +72,7 @@ render(){
   return(
       <div >
       <Cockpit 
-        orderedProductCount = {this.state.shoppingCart.length}
+        orderedTotalProductNumber = {orderedTotalProductNumber}
         togglePage = {this.togglePage}
       />
       

@@ -2,8 +2,8 @@ import React from 'react';
 import classes from './Cockpit.module.css';
 import shoppingCart from '../../Resources/img/shoppingCart.png';
 const cockpit = (props) => {
-    
-    let productCount = props.orderedProductCount;
+    let productCount = props.orderedTotalProductNumber;
+ 
     return(
     <div className={classes.Cockpit} >
     <div className={classes.Header}>
@@ -12,9 +12,13 @@ const cockpit = (props) => {
         <a href='#' onClick={() => props.togglePage('shoppingCart')}>Shopcart List</a> 
     </div>  
         <div className={''+classes.Header_Right}> 
+
+        <a href='#' onClick={() => props.togglePage('shoppingCart')}>
         <img src={shoppingCart}></img>
-        <label> 
-        { productCount= productCount > 0 ?  productCount : '' }</label>
+        </a> 
+
+        <label> { productCount= productCount > 0 ?  productCount : '' }</label>
+
         </div>
     </div>
 
