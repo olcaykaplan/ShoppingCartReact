@@ -1,0 +1,10 @@
+.EmptyList{
+    text-align: center;
+}
+.EmptyList img{
+    height: 70vh;
+}
+.EmptyList h1 {
+    text-transform: uppercase;
+    color: lightslategray;
+}

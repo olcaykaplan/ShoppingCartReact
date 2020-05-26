@@ -26,7 +26,7 @@ const shopCartItem  = (props) => {
 
 
   return(
-     <div id={props.product.id} className={classes.ShopCartItem}>
+     <div key={props.product.id} className={classes.ShopCartItem}>
      <div className= {classes.Item_Left}>
     
        <img  alt='products' src={require('../../../Resources/img/'+props.product.img)}></img> 
@@ -41,7 +41,7 @@ const shopCartItem  = (props) => {
       <select id={props.product.id+'s'}>
       {quantityList.reverse()}
       </select> */}
-      <a  className={classes.btn} onClick={() => props.clickedRemove(props.product.id)}>Remove</a>
+      <button  className={classes.btn} onClick={() => props.clickedRemove(props.product.id)}>Remove</button>
      </div>
      
       

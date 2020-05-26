@@ -8,12 +8,12 @@ const cockpit = (props) => {
     <div className={classes.Cockpit} >
     <div className={classes.Header}>
     <div className={classes.Header_Center}>
-        <a href='#' onClick={() => props.togglePage('home') }>Items</a>
-        <a href='#' onClick={() => props.togglePage('shoppingCart')}>Shopcart List</a> 
+        <a  onClick={() => props.togglePage('home') }>Items</a>
+        <a onClick={() => props.togglePage('shoppingCart')}>Shopcart List</a> 
     </div>  
         <div className={''+classes.Header_Right}> 
 
-        <a href='#' onClick={() => props.togglePage('shoppingCart')}>
+        <a  onClick={() => props.togglePage('shoppingCart')}>
         <img src={shoppingCart}></img>
         </a> 
 
