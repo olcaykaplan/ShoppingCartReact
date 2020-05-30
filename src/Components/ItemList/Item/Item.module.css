@@ -44,7 +44,8 @@
     font-weight: bold;
     display: block;
     width: 150px;
-     margin: 25px auto;
+    margin: 25px auto;
+    border: none;
 }
 
 .btn:hover{
