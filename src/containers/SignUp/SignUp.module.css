@@ -1,0 +1,46 @@
+.Form{
+    border: 2px solid #5a548a;
+    height: 450px;
+    width: 35%;
+    display: inline-block;
+    margin-top: 25px;
+    border-radius: 7px;
+   justify-content: center;
+}
+.Form label {
+margin-left: 25px;
+float: left;
+font-weight: bold;
+color: #29235b;
+}
+.Form button {
+    width: 55%;
+    height: 35px;
+    margin-top: 35px;
+    background-color: ;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #4d44a5;
+    color: #fff;
+    opacity: 85%
+}
+.Form button:hover{
+    opacity: 1;
+}
+.Form input{
+    height:35px;
+    border: 0.5px solid #ccc;
+    width: 80%;
+    margin-top: 15px;
+}
+.Form input:focus{
+    background-color: rgb(229, 248, 255);
+}
+.NameSurname input
+{
+  width: 35%;
+  margin: 15px 15px;
+}
+hr{
+ border-color: #29235b ;
+}

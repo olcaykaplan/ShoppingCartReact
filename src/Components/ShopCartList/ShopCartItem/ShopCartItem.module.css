@@ -25,10 +25,11 @@
 .btn{
     color: white ;
     background-color: #29235b;
-
+    border: none;
     padding: 8px 9px;
     font-weight: bold;
-    
+    height: 35px;
+    border-radius: 35px;
     width: 150px;
      margin: 0 25px;
 }

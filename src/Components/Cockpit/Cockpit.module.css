@@ -3,17 +3,25 @@ height:50px;
 background-color: #29235b;
 color:white;
 font-size: 13px;
-
-    justify-content: center;
+ justify-content: center;
 }
+
 .Cockpit label {
     font-weight: bold;
+}
+.Header_Left{
+    width: 20%;
+    float: left;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .Header_Center{
     float: left;
     text-align: center;
-    width: 85%;
-    margin-left: 8%;
+    width: 65%;
+   
 }
 .Header_Right{
     float: left;
@@ -23,12 +31,9 @@ font-size: 13px;
 }
 .Header_Right img{
 height: 35px;
-
 }
 .Header_Right a{
-
     margin: 0 !important;
-    
 }
 
 .Cockpit  a {
@@ -42,4 +47,22 @@ height: 35px;
  }
  .Cockpit  a:hover {
  color: white ;    
+}
+
+.Button{
+    margin-top: 11px;
+    height: 28px;
+    width: 90px;
+    background-color: rgb(255, 193, 78); 
+    
+    border:none;
+    border-radius: 3px;
+    font-weight: bold;
+}
+.ButtonLogin{   margin-right: 20px;}
+.ButtonLogin:hover,
+.ButtonSingUp:hover{
+    
+    background-color: rgb(255, 166, 0); 
+   opacity: 95%;
 }

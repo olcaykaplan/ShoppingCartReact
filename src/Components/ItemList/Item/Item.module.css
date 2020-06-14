@@ -44,6 +44,8 @@
     font-weight: bold;
     display: block;
     width: 150px;
+    height: 35px;
+    border-radius: 35px;
     margin: 25px auto;
     border: none;
 }

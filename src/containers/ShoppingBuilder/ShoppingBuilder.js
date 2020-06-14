@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Cockpit from '../../Components/Cockpit/Cockpit'
 import ItemList from '../../Components/ItemList/ItemList';
 import ShopCartList from '../../Components/ShopCartList/ShopCartList';
-
+import Login from '../Login/Login';
+import SingUp from '../SignUp/SignUp';
 class ShoppingBuilder extends Component {
     state= {
         items:[
@@ -11,7 +12,7 @@ class ShoppingBuilder extends Component {
           {id:'1055sd',  name:'Red Daily-Life Vans Shoes',  img:'vans-red.jpg',  price:547.99,},
          ],
          shoppingCart:[],
-         homePage: true,
+         homePage: 'singUp',
          totalPrice:0,
       }
       
@@ -56,8 +57,8 @@ class ShoppingBuilder extends Component {
       }
       
       togglePage = (page) => {
-      let status = true;
-      if(page === 'shoppingCart') status = false;
+      let status = page;
+      if(page !== 'homepage') status = false;
       else status = true;
        this.setState({
          homePage:status
@@ -68,18 +69,24 @@ class ShoppingBuilder extends Component {
         let pageContent = '';
         let orderedTotalProductNumber = 0;
         this.state.shoppingCart.map(p => ( orderedTotalProductNumber += p.quantity)); 
-        if(this.state.homePage){
+        if(this.state.homePage === 'homepage'){
          pageContent =  <ItemList 
                       items = {this.state.items}
                       clicked = {this.addShoppingCart}
-                      />
+                      />;
         }
-        else{
+        else if (this.state.homePage === 'shoppingCart' ) {
           pageContent = <ShopCartList
                           products = {this.state.shoppingCart}
                           clickedRemove = {this.removeShoppingCartItem}
                           totalPrice = {this.state.totalPrice}
-                        />
+                        />;
+        }
+        else if (this.state.homePage === 'singUp' ) {
+          pageContent = <SingUp />;
+        }
+        else {
+
         }
         return(
             <div >
