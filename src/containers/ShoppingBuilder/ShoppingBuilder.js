@@ -86,7 +86,7 @@ class ShoppingBuilder extends Component {
           pageContent = <SingUp />;
         }
         else {
-
+          pageContent = <Login/>;
         }
         return(
             <div >

@@ -16,8 +16,8 @@ color: #29235b;
 .Form button {
     width: 55%;
     height: 35px;
-    margin-top: 35px;
-    background-color: ;
+    margin-top: 55px;
+  
     font-size: 17px;
     font-weight: bold;
     background-color: #4d44a5;
@@ -43,4 +43,7 @@ color: #29235b;
 }
 hr{
  border-color: #29235b ;
+}
+.Form label {
+   margin-left: 10%;
 }
