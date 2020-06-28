@@ -1,5 +1,5 @@
 .Cockpit{
-height:50px;
+height:6vh;
 background-color: #29235b;
 color:white;
 font-size: 13px;
@@ -31,6 +31,7 @@ font-size: 13px;
 }
 .Header_Right img{
 height: 35px;
+cursor: pointer;
 }
 .Header_Right a{
     margin: 0 !important;

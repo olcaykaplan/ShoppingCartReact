@@ -13,7 +13,7 @@ export default class SignUp extends Component {
         handleChange (event) {
                 this.setState({[event.target.name] : event.target.value});
         }
-
+       
       async  handleSubmit(event) {
         event.preventDefault();
               
@@ -53,8 +53,11 @@ export default class SignUp extends Component {
                 return (
                    // put here two button here login and signup, user can swithc the page what use click
                     <div style={{textAlign:"center", justifyContent:"center", alignItems: "center" }}>
+                  
+                   
                        <form className={classes.Form} onSubmit={(e) => this.handleSubmit(e)}>
-                       <h1> </h1>
+                      <h1 className={classes.Title}>Register</h1>
+                      <hr/>
                        <div className={classes.NameSurname}>
                                 <input 
                                 type='text'

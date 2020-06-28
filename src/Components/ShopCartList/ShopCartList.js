@@ -18,7 +18,9 @@ const shopCartList = (props) =>{
              <EmptyList emptyPage='shoppingCartEmpty.png'>shopping cart is empty</EmptyList>;
              console.log(content);
     return(
-      <div>
+      <div style={{
+          minHeight: '60vh'
+      }}>
             {content}           
            
             {shopCartProductList}

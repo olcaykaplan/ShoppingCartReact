@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import Cockpit from '../../Components/Cockpit/Cockpit'
 import ItemList from '../../Components/ItemList/ItemList';
 import ShopCartList from '../../Components/ShopCartList/ShopCartList';
-import Login from '../Login/Login';
-import SingUp from '../SignUp/SignUp';
+// import Login from '../LoginRegister/Login/Login';
+// import SignUp from '../LoginRegister/SignUp/SignUp';
+import LoginRegister from '../LoginRegister/LoginRegister';
+import { Route } from "react-router-dom";
 class ShoppingBuilder extends Component {
     state= {
         items:[
@@ -12,7 +14,7 @@ class ShoppingBuilder extends Component {
           {id:'1055sd',  name:'Red Daily-Life Vans Shoes',  img:'vans-red.jpg',  price:547.99,},
          ],
          shoppingCart:[],
-         homePage: 'singUp',
+         page: 'login',
          totalPrice:0,
       }
       
@@ -51,50 +53,56 @@ class ShoppingBuilder extends Component {
           removedItem.quantity =  removedItem.quantity  - 1;
           shopList[productIndex] = removedItem;
        }
-       console.log(shopList);
+       
        this.setState({shoppingCart : shopList, totalPrice : totalPrice}); 
        
       }
       
       togglePage = (page) => {
       let status = page;
-      if(page !== 'homepage') status = false;
-      else status = true;
+      // if(page !== 'homepage') status = false;
+      // else status = true;
+      // debugger
+    
        this.setState({
-         homePage:status
+        page:status
        });
       }
       
       render(){
-        let pageContent = '';
+        let pageContent = <ItemList 
+        items = {this.state.items}
+        clicked = {this.addShoppingCart}
+        />;
         let orderedTotalProductNumber = 0;
         this.state.shoppingCart.map(p => ( orderedTotalProductNumber += p.quantity)); 
-        if(this.state.homePage === 'homepage'){
-         pageContent =  <ItemList 
-                      items = {this.state.items}
-                      clicked = {this.addShoppingCart}
-                      />;
-        }
-        else if (this.state.homePage === 'shoppingCart' ) {
+       
+        if (this.state.page === 'shoppingCart' ) {
           pageContent = <ShopCartList
                           products = {this.state.shoppingCart}
                           clickedRemove = {this.removeShoppingCartItem}
                           totalPrice = {this.state.totalPrice}
                         />;
         }
-        else if (this.state.homePage === 'singUp' ) {
-          pageContent = <SingUp />;
+        else if (this.state.page === 'signup'|| this.state.page === 'login' ) {
+          // pageContent = <LoginRegister  page={this.state.page}/>
+         
+           pageContent = <Route
+                          render = 
+                            { (props) => 
+                            <LoginRegister 
+                              {...props} page ={this.state.page} />
+                              }/> 
+  
         }
-        else {
-          pageContent = <Login/>;
-        }
+       
         return(
             <div >
             <Cockpit 
               orderedTotalProductNumber = {orderedTotalProductNumber}
               togglePage = {this.togglePage}
             />
-            
+              
            {pageContent}
       
             </div>

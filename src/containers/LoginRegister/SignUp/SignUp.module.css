@@ -1,6 +1,6 @@
 .Form{
     border: 2px solid #5a548a;
-    height: 450px;
+    height: 500px;
     width: 35%;
     display: inline-block;
     margin-top: 25px;
@@ -17,15 +17,18 @@ color: #29235b;
     width: 55%;
     height: 35px;
     margin-top: 55px;
-  
+    cursor: pointer;
     font-size: 17px;
     font-weight: bold;
     background-color: #4d44a5;
+    border-color:#4d44a5 ;
     color: #fff;
-    opacity: 85%
+    
 }
 .Form button:hover{
-    opacity: 1;
+    background-color:rgb(255, 193, 78);
+    color:black;
+    border-color:rgb(255, 193, 78) ;
 }
 .Form input{
     height:35px;
@@ -46,4 +49,9 @@ hr{
 }
 .Form label {
    margin-left: 10%;
+}
+.Title{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #29235b;
 }

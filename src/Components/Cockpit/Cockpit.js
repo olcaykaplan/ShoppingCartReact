@@ -9,7 +9,7 @@ const cockpit = (props) => {
     <div className={classes.Header}>
     <div className={classes.Header_Left}>
         <button onClick={() => props.togglePage('login')}   className={[classes.Button, classes.ButtonLogin].join(' ')} >Login</button>
-        <button onClick={() => props.togglePage('singUp')} className={ [classes.Button, classes.ButtonSingUp].join(' ')}> Sing up</button>
+        <button onClick={() => props.togglePage('signup')} className={ [classes.Button, classes.ButtonSignUp].join(' ')}> Sign up</button>
     </div>
     <div className={classes.Header_Center}>
         <a  onClick={() => props.togglePage('homepage') }>Items</a>
